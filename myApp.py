@@ -31,7 +31,13 @@ class readTemperature(FigCanvas):
     def plot(self):
         pass
         # db call
-        
+        db = pymysql.connect(settings["database"]["host"], settings["database"]["user"], settings["database"]["password"], settings["database"]["dbname"])
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM sensor_values")
+        data = cursor.fetchall()
+        for dat in data:
+            print(dat)
+        db.close()
 
         # Pre Processing
         
