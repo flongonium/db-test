@@ -27,6 +27,7 @@ class readTemperature(FigCanvas):
         self.plot()
     
     def plot(self):
+        pass
         # db call
         
 
@@ -45,6 +46,7 @@ class readHumidity(FigCanvas):
         self.plot()
 
     def plot(self):
+        pass
         # db call
         
 
