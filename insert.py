@@ -1,7 +1,7 @@
 import pymysql
 
 
-connection = pymysql.connect(host="192.168.178.33", user="sauna", password="1234", database="sauna")
+connection = pymysql.Connect(host="192.168.178.33", user="sauna", password="1234", database="sauna")
 
 connection.begin()
 cursor = connection.cursor()
