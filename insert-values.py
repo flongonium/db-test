@@ -7,7 +7,7 @@ connection.begin()
 cursor = connection.cursor()
 
 query = 'INSERT INTO `sensor_values` (`temp`, `hum`) VALUES (%s, %s)'
-insert_values = ("21", "61")
+insert_values = ("28", "60")
 connection.cursor().execute(query, insert_values[:])
 connection.commit()
 cursor.close()
