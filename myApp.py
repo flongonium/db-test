@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import sys
+import datetime
 
 # plot
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigCanvas
@@ -42,10 +43,15 @@ class readTemperature(FigCanvas):
 
         for dat in data:
             #print(dat)
-            xvalues.append(dat[0])
-            yvalues.append(dat[1])
+            xvalues.append(dat[1])
+            yvalues.append(dat[0])
 
-        # plot     
+        # plot
+        x = np.array(xvalues)
+        y = yvalues
+
+        plt.plot(x,y)
+        plt.show()
 
 
 class readHumidity(FigCanvas):
