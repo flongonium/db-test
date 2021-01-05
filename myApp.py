@@ -13,9 +13,11 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QToolTip
 from PyQt5.QtGui import QFont
 from PyQt5 import QtCore
 
-# database
+# database and settings
 import pymysql
-
+import configparser
+settings = configparser.ConfigParser()
+settings.read("config/myApp.cfg")
 
 
 class readTemperature(FigCanvas):
