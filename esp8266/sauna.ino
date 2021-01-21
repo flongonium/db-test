@@ -1,9 +1,9 @@
 // Do not remove the include below
 #include "sauna.h"
 
-const char *ssid 		= "YOUR SSID";
+const char *ssid 	= "YOUR SSID";
 const char *password	= "YOUR PASSWORD";
-const char *host		= "YOUR HOST";
+const char *host	= "YOUR HOST";
 
 SI7021 sensor;
 const int sda_hw = 02;
