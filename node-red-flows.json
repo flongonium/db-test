@@ -1,0 +1,890 @@
+[
+    {
+        "id": "26181423.95175c",
+        "type": "tab",
+        "label": "Sauna_BME280",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4c1fd0ea.2539e",
+        "type": "tab",
+        "label": "Sauna_OnOff",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4d50bff9.fb5da",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "0",
+        "bin": "bin",
+        "out": "time",
+        "addchar": "\\n",
+        "responsetimeout": "0"
+    },
+    {
+        "id": "970e6c0d.3811e",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "29cb1ffc.c0aad",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b0e94d40.f932b",
+        "type": "Stackhero-MySQL-Server",
+        "z": "",
+        "name": "",
+        "host": "xxxxxx.stackhero-network.com",
+        "port": "3306",
+        "tls": true,
+        "database": ""
+    },
+    {
+        "id": "3d322767.de7f28",
+        "type": "MySQLdatabase",
+        "z": "",
+        "name": "Sauna DB localhost",
+        "host": "localhost",
+        "port": "3306",
+        "db": "sauna",
+        "tz": "UTC+1",
+        "charset": "UTF8"
+    },
+    {
+        "id": "4a8cf816.4ddbb8",
+        "type": "MySQLdatabase",
+        "z": "",
+        "name": "Sauna 127.0.0.1",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "sauna",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "bf5730f3.11aaa",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#003dcc",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#920c0c",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#003dcc",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#003dcc",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1a5eff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#003dcc",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Sauna Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "icon",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 52,
+                "sy": 52,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6fc7a362.1ccd9c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperatur",
+        "tab": "67b906bd.6c9628",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "67b906bd.6c9628",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sauna Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c3693dad.f422a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Luftfeuchtigkeit",
+        "tab": "67b906bd.6c9628",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "138c2ec2.6d8459",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sauna Anschalte und Aussshalten",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f999d7e0.d25bf",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sauna Ein-, und Ausschalten",
+        "tab": "138c2ec2.6d8459",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "bdfcc0a.51b214",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "c3693dad.f422a",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "226faf1d.bc52c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "6fc7a362.1ccd9c",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d1370b60.1d6e08",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "799d7f56.bdb5b",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "YOUR ADDRESS",
+        "broker": "YOUR ADDRESS",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "977291f6.aa91e",
+        "type": "mysql",
+        "z": "26181423.95175c",
+        "mydb": "3d322767.de7f28",
+        "name": "",
+        "x": 710,
+        "y": 200,
+        "wires": [
+            [
+                "8af99903.9165a8",
+                "43c95742.dcd528"
+            ]
+        ]
+    },
+    {
+        "id": "fcaac2ac.324ca",
+        "type": "inject",
+        "z": "26181423.95175c",
+        "name": "interval 10s",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "3cbc8f9c.b5c8",
+                "b0b481a6.2a2f6",
+                "c8ecced7.b8d84",
+                "e870071c.5966e8"
+            ]
+        ]
+    },
+    {
+        "id": "8efd332a.456ce",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1250,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3cbc8f9c.b5c8",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "select newest value",
+        "func": "msg.topic=\"SELECT temp FROM sensor_values ORDER BY id DESC LIMIT 1;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "977291f6.aa91e"
+            ]
+        ]
+    },
+    {
+        "id": "c8ecced7.b8d84",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "select newest 40 values",
+        "func": "msg.topic = \"SELECT temp FROM sensor_values ORDER BY id DESC LIMIT 40;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "14f3d1f5.8457be"
+            ]
+        ],
+        "info": "selects newest values to plot\n40 values = 2 minutes"
+    },
+    {
+        "id": "7ce20bff.9b5304",
+        "type": "ui_gauge",
+        "z": "26181423.95175c",
+        "name": "",
+        "group": "6fc7a362.1ccd9c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Aktuelle Temperatur",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "90",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "x": 1140,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "14f3d1f5.8457be",
+        "type": "mysql",
+        "z": "26181423.95175c",
+        "mydb": "3d322767.de7f28",
+        "name": "",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "b7b1a060.ea42b",
+                "a121e5de.c50aa8"
+            ]
+        ]
+    },
+    {
+        "id": "a16e810c.c471f",
+        "type": "ui_chart",
+        "z": "26181423.95175c",
+        "name": "",
+        "group": "6fc7a362.1ccd9c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperaturverlauf - 2 Minuten",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "90",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1170,
+        "y": 300,
+        "wires": [
+            [
+                "8efd332a.456ce"
+            ]
+        ]
+    },
+    {
+        "id": "b7b1a060.ea42b",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "process values",
+        "func": "for (i = 1; i<=40; i++)\n{\n    msg.payload = msg.payload[i].temp;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 300,
+        "wires": [
+            [
+                "a16e810c.c471f"
+            ]
+        ]
+    },
+    {
+        "id": "8af99903.9165a8",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "process values",
+        "func": "msg.payload = msg.payload[0].temp;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 200,
+        "wires": [
+            [
+                "7ce20bff.9b5304"
+            ]
+        ]
+    },
+    {
+        "id": "a121e5de.c50aa8",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "43c95742.dcd528",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 910,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "34b8ad24.b8ae92",
+        "type": "mysql",
+        "z": "26181423.95175c",
+        "mydb": "3d322767.de7f28",
+        "name": "",
+        "x": 710,
+        "y": 440,
+        "wires": [
+            [
+                "57291507.be293c",
+                "5e29fada.d11924"
+            ]
+        ]
+    },
+    {
+        "id": "b0b481a6.2a2f6",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "select newest value",
+        "func": "msg.topic=\"SELECT hum FROM sensor_values ORDER BY id DESC LIMIT 1;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "34b8ad24.b8ae92"
+            ]
+        ]
+    },
+    {
+        "id": "641757c0.d25b78",
+        "type": "ui_gauge",
+        "z": "26181423.95175c",
+        "name": "",
+        "group": "c3693dad.f422a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Aktuelle Luftfeuchtigkeit",
+        "label": "%rel",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "90",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "50",
+        "x": 1150,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "57291507.be293c",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "process values",
+        "func": "msg.payload = msg.payload[0].hum;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 440,
+        "wires": [
+            [
+                "641757c0.d25b78"
+            ]
+        ]
+    },
+    {
+        "id": "5e29fada.d11924",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 910,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7dce59fb.f55a68",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1250,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e870071c.5966e8",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "select newest 40 values",
+        "func": "msg.topic = \"SELECT hum FROM sensor_values ORDER BY id DESC LIMIT 40;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "2c9dab73.1ae134"
+            ]
+        ],
+        "info": "selects newest values to plot\n40 values = 2 minutes"
+    },
+    {
+        "id": "2c9dab73.1ae134",
+        "type": "mysql",
+        "z": "26181423.95175c",
+        "mydb": "3d322767.de7f28",
+        "name": "",
+        "x": 710,
+        "y": 560,
+        "wires": [
+            [
+                "c3b4afd2.ab401",
+                "deaf0036.2c9e"
+            ]
+        ]
+    },
+    {
+        "id": "61e6b86.e12cb48",
+        "type": "ui_chart",
+        "z": "26181423.95175c",
+        "name": "",
+        "group": "c3693dad.f422a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Luftfeuchtigkeitsverlauf - 2 Minuten",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "90",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1180,
+        "y": 560,
+        "wires": [
+            [
+                "7dce59fb.f55a68"
+            ]
+        ]
+    },
+    {
+        "id": "c3b4afd2.ab401",
+        "type": "function",
+        "z": "26181423.95175c",
+        "name": "process values",
+        "func": "for (i = 1; i<=40; i++)\n{\n    msg.payload = msg.payload[i].hum;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 560,
+        "wires": [
+            [
+                "61e6b86.e12cb48"
+            ]
+        ]
+    },
+    {
+        "id": "deaf0036.2c9e",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 910,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4dd223e3.938aac",
+        "type": "ui_slider",
+        "z": "26181423.95175c",
+        "name": "",
+        "label": "Temperatur",
+        "tooltip": "",
+        "group": "f999d7e0.d25bf",
+        "order": 1,
+        "width": "8",
+        "height": "2",
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": "60",
+        "max": "100",
+        "step": 1,
+        "x": 690,
+        "y": 880,
+        "wires": [
+            [
+                "d7b4c08d.f9073"
+            ]
+        ]
+    },
+    {
+        "id": "d7b4c08d.f9073",
+        "type": "ui_text",
+        "z": "26181423.95175c",
+        "group": "f999d7e0.d25bf",
+        "order": 2,
+        "width": "8",
+        "height": "1",
+        "name": "",
+        "label": "Eingestellt auf: ",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-center",
+        "x": 920,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "5f5a9f8b.19092",
+        "type": "ui_button",
+        "z": "26181423.95175c",
+        "name": "",
+        "group": "f999d7e0.d25bf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Einschalten",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "an",
+        "payloadType": "str",
+        "topic": "",
+        "x": 690,
+        "y": 700,
+        "wires": [
+            [
+                "d1e0d15e.f938c",
+                "304502d0.5a473e",
+                "f76b4081.a0b0f"
+            ]
+        ]
+    },
+    {
+        "id": "21dffd53.41ec62",
+        "type": "ui_button",
+        "z": "26181423.95175c",
+        "name": "",
+        "group": "f999d7e0.d25bf",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Ausschalten",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "aus",
+        "payloadType": "str",
+        "topic": "",
+        "x": 690,
+        "y": 760,
+        "wires": [
+            [
+                "d1e0d15e.f938c",
+                "304502d0.5a473e",
+                "f76b4081.a0b0f"
+            ]
+        ]
+    },
+    {
+        "id": "d1e0d15e.f938c",
+        "type": "ui_text",
+        "z": "26181423.95175c",
+        "group": "f999d7e0.d25bf",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sauna ist",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 920,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "304502d0.5a473e",
+        "type": "mqtt out",
+        "z": "26181423.95175c",
+        "name": "sauna/OnOff",
+        "topic": "sauna/OnOff",
+        "qos": "",
+        "retain": "",
+        "broker": "799d7f56.bdb5b",
+        "x": 930,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "f76b4081.a0b0f",
+        "type": "debug",
+        "z": "26181423.95175c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 930,
+        "y": 660,
+        "wires": []
+    }
+]
